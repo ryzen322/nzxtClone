@@ -1,32 +1,14 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
-const StorageCost = () => {
-  const itemData = useSelector((state) => state.myStore);
-
-  const partsItemArray = [];
-
-  for (const item of itemData) {
-    partsItemArray.push(item.case);
-    partsItemArray.push(item.cpu);
-    partsItemArray.push(item.gpu);
-    partsItemArray.push(item.motherboard);
-    partsItemArray.push(item.ram);
-    partsItemArray.push(item.storage);
-    partsItemArray.push(item.cooling);
-    partsItemArray.push(item.powersupply);
-  }
-
-  const total = partsItemArray
-    .map((cur) => cur.total)
+const StorageCost = ({ priceItem = [] }) => {
+  const total = priceItem
+    .map((data) => data.price)
     .reduce((curr, value) => curr + value, 0);
-
   const currency = new Intl.NumberFormat("en-us", {
     style: "currency",
     currency: "USD",
   });
 
-  console.log("arteezy");
   const price = currency.format(total);
 
   return (

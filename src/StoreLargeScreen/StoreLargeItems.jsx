@@ -2,13 +2,13 @@ import StoreLargeItemList from "./StoreLargeItemList";
 
 const StoreLargeItems = ({ pcPartsArray = [], itemValuesData }) => {
   return (
-    <div className=" w-full h-[18rem]  grid grid-rows-5 grid-cols-2 gap-2">
+    <div className=" w-full h-[18rem]  grid grid-rows-5 grid-cols-2 gap-2 2xl:h-[25rem]">
       <div
         className={` bg-[#222426] col-span-2 rounded-md border border-[#222426] hover:border-white cursor-pointer flex items-center gap-2 p-1`}
       >
-        <div className=" h-full w-[2.35rem] rounded-md flex items-center justify-center">
+        <div className=" h-full w-[2.35rem] rounded-md flex items-center justify-center px-1 2xl:w-[4rem]">
           <img
-            className=" w-[2.35rem]"
+            className=" w-full h-full object-contain"
             src={"https://nzxt.com/icons/svg/chipset.svg"}
             alt=""
           />

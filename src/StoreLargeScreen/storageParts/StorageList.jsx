@@ -21,8 +21,8 @@ const StorageList = ({ partsName, images, name, size, toggleStateHanlder }) => {
       }  flex flex-col`}
     >
       <div className=" flex items-center gap-4">
-        <div className=" flex justify-center items-center bg-white w-[5.25rem] h-[5.5rem] rounded-md">
-          <img src={images} alt="" />
+        <div className=" flex justify-center items-center bg-white w-[5.25rem] h-[5.5rem] rounded-md px-1 shrink-0">
+          <img className=" w-full h-full object-contain" src={images} alt="" />
         </div>
         <div className=" flex flex-col leading-5">
           <p className=" font-semibold">{name}</p>

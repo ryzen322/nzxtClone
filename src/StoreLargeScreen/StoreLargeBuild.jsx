@@ -2,13 +2,13 @@ import { MdOutlineNavigateNext } from "react-icons/md";
 
 const StoreLargeBuild = () => {
   return (
-    <div className=" flex p-2 w-[20rem] h-full flex-col gap-3 relative shrink-0">
-      <div className=" flex flex-col gap-2">
+    <div className="  p-2 w-[20rem] h-full flex flex-col gap-3 relative shrink-0  2xl:justify-center 2xl:w-[35rem]">
+      <div className=" flex flex-col gap-2 2xl:hidden">
         <h1 className=" text-white text-2xl font-semibold">H5 Flow Build</h1>
       </div>
       <div className=" w-full h-[18rem] flex justify-center items-center">
         <img
-          className=" w-[16rem]"
+          className=" w-[16rem] 2xl:w-[30rem]"
           src={`https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FrzjMYx.png&w=640&q=75`}
           alt=""
         />

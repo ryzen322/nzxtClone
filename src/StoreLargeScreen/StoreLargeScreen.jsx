@@ -35,6 +35,8 @@ const StoreLargeScreen = () => {
     const id = item.pcParts;
     const activeState = item.toggle;
     const itemArray = item.itemArray;
+    const price = item.total;
+    const quantity = item.quantity;
     pcPartsFinalyArray.push({
       id,
       pcParts,
@@ -42,6 +44,8 @@ const StoreLargeScreen = () => {
       images,
       activeState,
       itemArray,
+      price,
+      quantity,
     });
   }
 
@@ -50,7 +54,7 @@ const StoreLargeScreen = () => {
   });
 
   return (
-    <section className="hidden lg:flex flex-col h-screen w-full bg-[#1A1C1E] ">
+    <section className="hidden lg:flex flex-col h-screen w-full bg-[#1A1C1E] 2xl:flex-row">
       <StoreLargeBuildItem
         pcPartsArray={mergeArray}
         itemValuesData={itemValuesData}

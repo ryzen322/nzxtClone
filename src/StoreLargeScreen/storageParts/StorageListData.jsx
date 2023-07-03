@@ -9,7 +9,7 @@ const StorageListData = ({ keys, itemArray, activeState }) => {
       {displayData && (
         <div className=" w-full flex flex-col gap-5">
           <div className=" flex justify-between items-center"></div>
-          <div className=" grid grid-cols-3 gap-2">
+          <div className=" grid grid-cols-3 gap-2 2xl:grid-cols-1">
             {itemArray.map((item) => (
               <StorageList
                 key={item.id}

@@ -27,8 +27,8 @@ const StoreLargeItemList = ({
       }`}
       onClick={handleClick}
     >
-      <div className=" h-full w-[2.5rem] rounded-md flex items-center justify-center bg-white shrink-0">
-        <img className=" w-[2.35rem]" src={images} alt="" />
+      <div className=" h-full w-[2.5rem] rounded-md flex items-center justify-center bg-white shrink-0 px-1 2xl:w-[4rem]">
+        <img className=" h-full w-full object-contain" src={images} alt="" />
       </div>
       <div className=" flex flex-col leading-5 text-white">
         <h1 className=" font-semibold">{parts}</h1>

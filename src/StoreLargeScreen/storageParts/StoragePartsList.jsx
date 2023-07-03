@@ -7,7 +7,7 @@ const StoragePartsList = ({ dataArray = [], itemValuesData }) => {
   });
 
   return (
-    <div className="scrollBarHide text-white w-full h-[28.2rem] p-4  overflow-auto">
+    <div className="scrollBarHide text-white w-full h-[28.2rem] p-4  overflow-auto 2xl:h-[50rem]">
       <StorageChipset />
       {mergeArray.map((data) => (
         <StorageListData
