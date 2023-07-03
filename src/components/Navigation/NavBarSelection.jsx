@@ -5,8 +5,8 @@ import NavBarItem from "./NavBarItem";
 
 const NavBarSelection = () => {
   return (
-    <div className=" absolute h-[21rem] w-[31rem] bg-Main-Color rounded-2xl top-[6.5rem] left-[0.15rem] z-50 p-5 flex gap-4">
-      <nav className=" w-[50%] flex flex-col">
+    <div className=" absolute h-auto w-[26rem] bg-Main-Color rounded-2xl top-[3.5rem] left-[0.15rem] z-50 p-5 flex flex-col gap-4">
+      <nav className=" w-full flex flex-col">
         <ul className=" text-stone-200 flex flex-col gap-4 font-bold">
           <li className=" flex items-center gap-2">
             <NavLink> BUILD A CUSTOM PC</NavLink>
@@ -19,7 +19,7 @@ const NavBarSelection = () => {
         </ul>
         <NavBarItem />
       </nav>
-      <div className=" w-[50%] h-full bg-blue-600 rounded-lg flex flex-col items-center justify-between">
+      <div className=" w-full h-full bg-blue-600 rounded-lg flex flex-col items-center justify-between">
         <div className=" flex flex-col text-white text-center mt-5">
           <h1 className=" font-semibold">BUILD A CUSTOM PC</h1>
           <p className=" font-normal text-base">

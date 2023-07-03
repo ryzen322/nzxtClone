@@ -25,6 +25,7 @@ const Items = ({
             images={item.images}
             name={item.name}
             size={item.size}
+            information={item.information}
           />
         ))}
       </ul>

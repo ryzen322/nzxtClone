@@ -73,7 +73,7 @@ const ShoppingCart = ({
   });
 
   return (
-    <div className=" flex flex-col w-full bg-black lg:bg-green-600">
+    <div className=" flex flex-col w-full bg-black ">
       <div className=" w-full h-[3rem] bg-[#313235] fixed flex left-0"></div>
       <section className=" w-full flex flex-col mt-[3rem] p-4 gap-[2.5rem]">
         <ChipSet />
