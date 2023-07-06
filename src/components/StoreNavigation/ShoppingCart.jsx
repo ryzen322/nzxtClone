@@ -55,6 +55,7 @@ const ShoppingCart = ({
     const id = item.pcParts;
     const activeState = item.toggle;
     const itemArray = item.itemArray;
+
     pcPartsFinalyArray.push({
       id,
       pcParts,

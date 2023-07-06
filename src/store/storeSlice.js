@@ -31,8 +31,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2F8o4Ab9.png&w=96&q=75",
       quantity: 1,
-      price: 169.0,
-      total: 169.0,
+      price: 170,
+      total: 170,
       itemArray: cpu,
     },
     gpu: {
@@ -42,8 +42,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FU9eU7h.png&w=96&q=75",
       quantity: 1,
-      price: 424.0,
-      total: 424.0,
+      price: 300,
+      total: 300,
       itemArray: gpu,
     },
     motherboard: {
@@ -53,8 +53,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FWP3I4b.png&w=96&q=75",
       quantity: 1,
-      price: 259.99,
-      total: 259.99,
+      price: 260,
+      total: 260,
       itemArray: motherboard,
     },
     ram: {
@@ -64,8 +64,9 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2F68fJ0u.png&w=96&q=75",
       quantity: 1,
-      price: 38.99,
-      total: 38.99,
+      price: 39,
+      total: 39,
+      capacity: "16GB (2 x 8GB)",
       itemArray: ram,
     },
     storage: {
@@ -75,8 +76,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FHMtp4I.png&w=96&q=7",
       quantity: 1,
-      price: 33.99,
-      total: 33.99,
+      price: 40,
+      total: 40,
       itemArray: storage,
     },
     cooling: {
@@ -86,8 +87,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FgxRANA.png&w=96&q=75",
       quantity: 1,
-      price: 33.99,
-      total: 33.99,
+      price: 160,
+      total: 160,
       itemArray: cooling,
     },
     powersupply: {
@@ -97,8 +98,8 @@ const initialState = [
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fnzxt-web-assets-dev.s3-us-west-2.amazonaws.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FmlbKnf.png&w=96&q=75",
       quantity: 1,
-      price: 99.99,
-      total: 99.99,
+      price: 100,
+      total: 100,
       itemArray: psu,
     },
   },
@@ -133,6 +134,7 @@ export const storeSlice = createSlice({
       const id = action.payload.idData;
       const images = action.payload.images;
       const partsName = action.payload.partsName;
+
       const item = state.find((item) => item.id === id);
 
       if (item) {
@@ -145,11 +147,18 @@ export const storeSlice = createSlice({
       const images = action.payload.images;
       const name = action.payload.name;
       const partsName = action.payload.partsName;
+      const quantityData = +action.payload.quantity;
+      const price = +action.payload.price;
+      const capacity = action.payload.capacity;
 
       const item = state.find((item) => item.id === id);
 
       if (item) {
-        (item[partsName].images = images), (item[partsName].pcParts = name);
+        (item[partsName].images = images),
+          (item[partsName].pcParts = name),
+          (item[partsName].quantity = quantityData),
+          (item[partsName].capacity = capacity),
+          (item[partsName].total = quantityData * price);
       }
     },
   },

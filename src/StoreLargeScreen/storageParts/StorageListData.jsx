@@ -17,6 +17,8 @@ const StorageListData = ({ keys, itemArray, activeState }) => {
                 images={item.images}
                 name={item.name}
                 size={item.size}
+                information={item.information}
+                price={item.price}
               />
             ))}
           </div>

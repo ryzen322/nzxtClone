@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import ShoppingCart from "./ShoppingCart";
 import ShoppingList from "./ShoppingList";
 import StoreLargeScreen from "../../StoreLargeScreen/StoreLargeScreen";
+import { useSelector } from "react-redux";
 
 const ShoppingStore = () => {
   const caseRef = useRef(null);

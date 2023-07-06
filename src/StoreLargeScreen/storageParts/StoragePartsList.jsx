@@ -16,6 +16,7 @@ const StoragePartsList = ({ dataArray = [], itemValuesData }) => {
           keys={data.keys}
           activeState={data.activeState}
           itemPartsName={data.itemPartsName}
+          if
         />
       ))}
     </div>

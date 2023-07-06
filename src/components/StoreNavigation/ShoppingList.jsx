@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import MyShoppingCart from "./Cart/MyShoppingCart";
 
 const ShoppingList = ({ executeScroll, funcState = [] }) => {
+  const navigate = useNavigate();
   const itemData = useSelector((state) => state.myStore);
 
   const partsItemArray = [];
@@ -65,7 +66,10 @@ const ShoppingList = ({ executeScroll, funcState = [] }) => {
             <p className=" text-sm">Monthly payments available.Learn More</p>
           </div>
         </div>
-        <Link className=" text-stone-300 w-full h-5 bg-[#7315E5] flex justify-center items-center rounded-md text-lg font-semibold py-[1.4rem]">
+        <Link
+          to="../cart"
+          className=" text-stone-300 w-full h-5 bg-[#7315E5] flex justify-center items-center rounded-md text-lg font-semibold py-[1.4rem]"
+        >
           Next
         </Link>
       </div>

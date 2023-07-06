@@ -2,8 +2,6 @@ import StoreLargeSettings from "./StoreLargeSettings";
 import StoreSummaryList from "./StoreSummaryList";
 
 const StoreLargeSummary = ({ dataArray = [] }) => {
-  console.log(dataArray);
-
   const item2 = dataArray.slice(0, 4);
   const item3 = dataArray.slice(4, dataArray.length);
   const item4 = [

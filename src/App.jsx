@@ -8,12 +8,14 @@ import NavigationHomePage from "./pages/Navigation";
 import HomePage from "./components/home/HomePage";
 import StoreNav from "./components/StoreNavigation/StoreNav";
 import ShoppingStore from "./components/StoreNavigation/ShoppingStore";
+import Cart from "./components/Cart/Cart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<NavigationHomePage />}>
         <Route index element={<HomePage />} />
+        <Route path="cart" element={<Cart />} />
       </Route>
       <Route path="build/pc" element={<StoreNav />}>
         <Route index element={<ShoppingStore />} />

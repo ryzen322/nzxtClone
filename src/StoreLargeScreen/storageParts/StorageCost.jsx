@@ -1,6 +1,7 @@
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const StorageCost = ({ priceItem = [] }) => {
+  const navigate = useNavigate();
   const total = priceItem
     .map((data) => data.price)
     .reduce((curr, value) => curr + value, 0);
@@ -23,7 +24,10 @@ const StorageCost = ({ priceItem = [] }) => {
         <p className=" leading-5">Monthly payments availabe. Learn</p>
         <p className=" text-sm">More</p>
       </div>
-      <button className=" ml-auto bg-[#7315E5] text-white rounded-md px-[3rem] py-[.6rem]">
+      <button
+        className=" ml-auto bg-[#7315E5] text-white rounded-md px-[3rem] py-[.6rem]"
+        onClick={() => navigate("/cart")}
+      >
         Next
       </button>
     </div>
