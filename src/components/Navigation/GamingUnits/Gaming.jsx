@@ -1,4 +1,3 @@
-import { IoClose } from "react-icons/io5";
 import NavigationUnits from "../../../UI/NavigationUnits";
 import { MdNavigateNext } from "react-icons/md";
 import { AiOutlineQuestionCircle } from "react-icons/ai";

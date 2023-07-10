@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 const CartItemList = ({ images, canvas, color, price }) => {
   return (
     <div className=" w-full flex p-3 gap-3 mt-8  border-b border-stone-600/30">

@@ -1,7 +1,8 @@
+import { useState } from "react";
 import CartItemList from "./cartItemList/cartItemList";
 
 const CartPheripheralsItems = () => {
-  const itemList = [
+  const [itemList, setItemList] = useState([
     {
       id: "1",
       images:
@@ -18,7 +19,7 @@ const CartPheripheralsItems = () => {
       color: "4 Colors",
       price: "$359.99",
     },
-  ];
+  ]);
 
   return (
     <div className="  mb-8">

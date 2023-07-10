@@ -1,6 +1,5 @@
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-import NavBarSelection from "./NavBarSelection";
 import { useState } from "react";
 import NavigationMobile from "./NavigationMobile";
 import { BsCart2 } from "react-icons/bs";
