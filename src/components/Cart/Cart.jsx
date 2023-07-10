@@ -1,5 +1,5 @@
 import Footer from "../../pages/Footer";
-import { CardList } from "./CardList";
+import CardList from "./CardList";
 import CartPheripherals from "./CartPheripherals";
 import ItemCart from "./ItemCart";
 

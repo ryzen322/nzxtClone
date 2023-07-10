@@ -1,6 +1,6 @@
 import CardListItems from "./cartItemList/CardListItems";
 
-export const CardList = () => {
+const CardList = () => {
   const itemList = [
     {
       id: "1",
@@ -120,3 +120,5 @@ export const CardList = () => {
     </div>
   );
 };
+
+export default CardList;
