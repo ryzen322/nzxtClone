@@ -5,8 +5,8 @@ import { MdOutlineNavigateNext } from "react-icons/md";
 import MyShoppingCart from "./Cart/MyShoppingCart";
 
 const ShoppingList = ({ executeScroll, funcState = [] }) => {
-  const navigate = useNavigate();
   const itemData = useSelector((state) => state.myStore);
+  const [toggle, setToggle] = useState(false);
 
   const partsItemArray = [];
   const sample = [];
@@ -26,7 +26,12 @@ const ShoppingList = ({ executeScroll, funcState = [] }) => {
     .map((cur) => cur.total)
     .reduce((curr, value) => curr + value, 0);
 
-  const [toggle, setToggle] = useState(false);
+  const currency = new Intl.NumberFormat("en-us", {
+    style: "currency",
+    currency: "USD",
+  });
+
+  const price = currency.format(total);
 
   const toggleShoppingList = () => {
     setToggle((state) => !state);
@@ -62,7 +67,7 @@ const ShoppingList = ({ executeScroll, funcState = [] }) => {
           </div>
 
           <div className=" text-white leading-5">
-            <h1 className=" font-bold">SubTotal: ${total}</h1>
+            <h1 className=" font-bold">SubTotal: {price}</h1>
             <p className=" text-sm">Monthly payments available.Learn More</p>
           </div>
         </div>

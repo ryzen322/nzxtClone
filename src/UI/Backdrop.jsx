@@ -1,9 +1,9 @@
 import React from "react";
 
-const Backdrop = ({ children, onclickfunction }) => {
+const BackdropUI = ({ children, onclickfunction }) => {
   return (
     <div
-      className=" w-screen h-screen z-20 bg-black/30 fixed top-0 left-0"
+      className=" w-screen h-screen z-[60] bg-black/30 fixed top-0 flex items-center justify-center"
       onClick={onclickfunction}
     >
       {children}
@@ -11,4 +11,4 @@ const Backdrop = ({ children, onclickfunction }) => {
   );
 };
 
-export default Backdrop;
+export default BackdropUI;

@@ -1,3 +1,4 @@
+import Footer from "../../pages/Footer";
 import HomePageCTX from "./HomePageCTX";
 import HomePageContent from "./HomePageContent";
 import HomePageContent_2 from "./HomePageContent_2";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <PreBuildDesc />
       <PcDescription />
       <HomePcParts />
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { replaceParts } from "../store/storeSlice";
+import BackdropUI from "./Backdrop";
 
 const Components = ({ component }) => {
   const [componentName, quantity] = component;
@@ -61,7 +62,7 @@ const Backdrop = ({
   };
 
   return (
-    <div className=" w-screen h-screen z-[60] bg-black/30 fixed top-0 flex items-center justify-center">
+    <BackdropUI>
       <div className=" z-50 bg-[#1A1C1E] h-screen w-screen flex flex-col  p-8 lg:w-[35rem] lg:h-auto rounded-md overflow-y-auto scrollBarHide">
         <div className=" w-full h-auto flex items-center">
           <h1
@@ -137,7 +138,7 @@ const Backdrop = ({
           ))}
         </div>
       </div>
-    </div>
+    </BackdropUI>
   );
 };
 

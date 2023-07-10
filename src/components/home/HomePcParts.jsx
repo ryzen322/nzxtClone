@@ -69,7 +69,7 @@ const items = [
     images: `https://nzxt.com/assets/cms/34299/1634239768-meet-the-parts-gpu.png?auto=format&fit=max&h=200&w=464`,
   },
   {
-    id: "item-9",
+    id: "item-10",
     parts: "Wi-Fi",
     header: "The communications relay.",
     sub_Header: `The Wi-Fi card allows you to access your home Wifi network wirelessly.`,
