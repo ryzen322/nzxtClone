@@ -1,5 +1,3 @@
-import React from "react";
-
 const CardListItems = ({ images, colors, price, size, partsName }) => {
   return (
     <div className=" flex flex-col">

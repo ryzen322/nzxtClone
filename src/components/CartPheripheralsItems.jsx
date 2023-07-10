@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CartItemList from "./cartItemList/cartItemList";
+import CartItemList from "./CartItemList";
 
 const CartPheripheralsItems = () => {
   const [itemList, setItemList] = useState([

@@ -1,4 +1,4 @@
-import CardListItems from "./cartItemList/CardListItems";
+import CardListItems from "./CardListItems";
 
 const CardList = () => {
   const itemList = [
