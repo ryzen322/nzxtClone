@@ -56,16 +56,16 @@ const Gaming = ({
           </div>
         </ul>
         <div
-          className={`w-full h-auto grid grid-cols-2 px-2 pt-2 bg-gradient-to-r  cursor-pointer group overflow-hidden ${color}`}
+          className={`w-full h-auto grid grid-cols-2 px-2 pt-4 bg-gradient-to-r  cursor-pointer group overflow-hidden ${color} rounded-md`}
         >
-          <div className=" flex items-center flex-col justify-center text-white h-auto">
+          <div className=" flex items-center flex-col justify-center text-white h-auto text-center">
             <h1 className=" font-semibold text-lg">{text}</h1>
             <p>More Options. Greater</p>
             <p className=" leading-4">Performance.</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center  h-[8rem] pt-3">
             <img
-              className=" cursor-pointer group-hover:scale-110 transition-all w-full h-full object-cover"
+              className=" cursor-pointer group-hover:scale-110 transition-all w-full h-full object-contain aspect-video"
               src={img}
               alt=""
             />
