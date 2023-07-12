@@ -16,7 +16,7 @@ const SectionNav = ({ onclickfunction }) => {
   return (
     <BackdropUI onclickfunction={onclickfunction}>
       <div
-        className="block lg:hidden absolute h-[95%] w-[92%] bg-white top-0 -left-[1.5px] px-4 pb-2 pt-[15px] z-[60]"
+        className="block lg:hidden absolute h-[95%] w-[92%] bg-white top-0 -left-[1.5px] px-4 pb-2 pt-[15px] z-[60] md:w-[50%]"
         onClick={eventPropagation}
       >
         <div className=" flex items-center space-x-4">
@@ -35,8 +35,6 @@ const SectionNav = ({ onclickfunction }) => {
 const NavigationItemsList = () => {
   const navlistItems = useSelector((state) => state.chipset.navlistItems);
   const dispatch = useDispatch();
-
-  console.log(navlistItems);
 
   return (
     <>

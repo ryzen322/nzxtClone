@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import Img from "../../UI/Img";
 
 const HomePageCTX = () => {
   return (
-    <div className=" h-[48rem] w-full  relative flex justify-center items-center lg:justify-normal ">
+    <div className=" h-[48rem] w-full  mt-[4rem] flex justify-center items-center lg:justify-normal ">
       <header className=" relative z-30 flex flex-col items-center lg:items-start ml-[4rem]">
         <h1 className=" text-4xl font-bold text-black/70 lg:text-6xl">
           Build A Custom PC
@@ -39,11 +40,11 @@ const HomePageCTX = () => {
               "https://nzxt.com/assets/cms/34299/1659593177-custom-pc-category-hero-bg-mobile.png?auto=format&fit=max&h=1200&w=1024"
             }
           />
-          <img
-            className=" w-full h-full object-cover"
+          <Img
             src={
               "https://nzxt.com/assets/cms/34299/1659593175-custom-pc-category-hero-bg-web.png?auto=format&fit=max&h=1500&w=2500"
             }
+            className={" w-full h-full object-cover"}
             alt="Faded Custom PC"
             title="Faded Custom PC"
           />

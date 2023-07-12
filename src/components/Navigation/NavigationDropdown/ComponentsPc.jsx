@@ -2,6 +2,7 @@ import { createPortal } from "react-dom";
 import BackdropUI from "../../../UI/Backdrop";
 import ComponentListItems from "./ComponentListItems";
 import componentsItemArray from "./componentsArray/componentsArray";
+import Img from "../../../UI/Img";
 
 const ComponentsItemPc = ({ onclickfunction }) => {
   const preventPropogation = (event) => {
@@ -30,7 +31,7 @@ const ComponentsItemPc = ({ onclickfunction }) => {
             <p className=" font-medium text-[15px]">Imagine What's Possible</p>
           </div>
           <div className=" mt-[3.5rem]">
-            <img
+            <Img
               className=" group-hover:scale-110 transition-all"
               src="https://nzxt.com/assets/cms/34299/1653470212-h7-nav-cta.png?auto=format&fit=clip&h=270&w=270"
               alt=""

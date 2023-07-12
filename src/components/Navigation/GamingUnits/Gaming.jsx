@@ -4,6 +4,7 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleNav } from "../../../store/chipsetSlice";
+import Img from "../../../UI/Img";
 
 const Gaming = ({
   toggleItems,
@@ -63,9 +64,9 @@ const Gaming = ({
             <p>More Options. Greater</p>
             <p className=" leading-4">Performance.</p>
           </div>
-          <div className="flex items-center justify-center  h-[8rem] pt-3">
-            <img
-              className=" cursor-pointer group-hover:scale-110 transition-all w-full h-full object-contain aspect-video"
+          <div className="flex items-center justify-center  h-[8rem] pt-3 ">
+            <Img
+              className=" cursor-pointer group-hover:scale-110 transition-all w-full h-full object-cover aspect-video sm:object-contain"
               src={img}
               alt=""
             />

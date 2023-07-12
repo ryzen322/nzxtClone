@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "../../UI/Img";
 
 const HomeContent_2 = () => {
   return (
@@ -27,12 +28,9 @@ const HomeContent_2 = () => {
             "https://nzxt.com/assets/cms/34299/1658962867-game-your-way-bg-web-1.png?auto=format&dpr=0.75&fit=max&h=900&w=1375"
           }
         />
-        <img
-          className=" w-full h-full object-cover absolute top-0 left-0"
-          src={
-            "https://nzxt.com/assets/cms/34299/1658962868-game-your-way-bg-mobile-1.png?auto=format&fit=max&h=600&w=768"
-          }
-          alt=""
+        <Img
+          src={`https://nzxt.com/assets/cms/34299/1658962868-game-your-way-bg-mobile-1.png?auto=format&fit=max&h=600&w=768`}
+          className={" w-full h-full object-cover absolute top-0 left-0"}
         />
       </picture>
     </div>

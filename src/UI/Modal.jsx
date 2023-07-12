@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { replaceParts } from "../store/storeSlice";
 import BackdropUI from "./Backdrop";
+import Img from "./Img";
 
 const Components = ({ component }) => {
   const [componentName, quantity] = component;
@@ -73,6 +74,8 @@ const Backdrop = ({
           </h1>
         </div>
         <div className=" h-[15rem] lg:h-[10rem]">
+          <Img src={images} className=" w-full h-full object-contain" />
+
           <img className=" w-full h-full object-contain" src={images} alt="" />
         </div>
         <h1 className=" text-white m-8 text-2xl font-semibold text-center">

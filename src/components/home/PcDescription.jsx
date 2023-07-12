@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "../../UI/Img";
 
 const items = [
   {
@@ -49,9 +50,8 @@ const PcDescription = () => {
           media="(min-width:700px)"
           srcSet={`https://nzxt.com/assets/cms/34299/1659594250-boost-performance-primary.png?auto=format&fit=fillmax&h=1344&w=1344`}
         />
-        <img
+        <Img
           src={`https://nzxt.com/assets/cms/34299/1659594250-boost-performance-primary.png?auto=format&fit=fillmax&h=1344&w=1344`}
-          alt=""
         />
       </picture>
     </div>

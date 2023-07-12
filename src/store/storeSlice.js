@@ -17,6 +17,7 @@ const initialState = [
       pcParts: "NZXT H5 Flow",
       partsName: "Case",
       toggle: false,
+      capacity: "Black",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2F6gKiRO.png&w=96&q=75",
       quantity: 1,
@@ -28,6 +29,7 @@ const initialState = [
       pcParts: `AMD Ryzen 5 5600X 6-Cores 3.7GHz`,
       partsName: "CPU",
       toggle: false,
+      capacity: "BC-R55560X0-AMO",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2F8o4Ab9.png&w=96&q=75",
       quantity: 1,
@@ -39,6 +41,7 @@ const initialState = [
       pcParts: `ASUS GeForce RTX™ 4060 Ti Dual OC 8G`,
       partsName: "GPU",
       toggle: false,
+      capacity: "Black",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FU9eU7h.png&w=96&q=75",
       quantity: 1,
@@ -50,6 +53,7 @@ const initialState = [
       pcParts: `ASRock X570 Taichi WIFI`,
       partsName: "Motherboards",
       toggle: false,
+      capacity: "BM-B550PAH-AU",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FWP3I4b.png&w=96&q=75",
       quantity: 1,
@@ -73,6 +77,7 @@ const initialState = [
       pcParts: `Western Digital SN570`,
       partsName: "Storage",
       toggle: false,
+      capacity: "500.0 GB",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FHMtp4I.png&w=96&q=7",
       quantity: 1,
@@ -84,6 +89,7 @@ const initialState = [
       pcParts: `Gigabyte Aorus Waterforce 240`,
       partsName: "Cooling",
       toggle: false,
+      capacity: "Black",
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FgxRANA.png&w=96&q=75",
       quantity: 1,
@@ -94,6 +100,7 @@ const initialState = [
     powersupply: {
       pcParts: `XPG Core Reactor 650W Gold`,
       partsName: "Power Supplies",
+      capacity: " BP-0650GM0-XG0",
       toggle: false,
       images:
         "https://nzxt.com/_next/image?url=https%3A%2F%2Fnzxt-web-assets-dev.s3-us-west-2.amazonaws.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FmlbKnf.png&w=96&q=75",

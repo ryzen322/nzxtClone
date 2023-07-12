@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Img from "../../UI/Img";
 
 const HomePageContent = () => {
   return (
@@ -29,12 +30,15 @@ const HomePageContent = () => {
           }
         />
 
-        <img
-          className=" absolute bottom-0 left-7 md:-left-1 md:-top-16 lg:-top-[8rem] 2xl:w-[140rem] 2xl:-top-[25rem]"
+        <Img
           src={
             "https://nzxt.com/assets/cms/34299/1672872272-nvidia-4070ti-banner-dark-primary-m.png?auto=format&fit=max&h=550&w=384"
           }
-          alt=""
+          className={
+            " absolute bottom-0 left-7 md:-left-1 md:-top-16 lg:-top-[8rem] 2xl:w-[140rem] 2xl:-top-[25rem]"
+          }
+          alt="Faded Custom PC"
+          title="Faded Custom PC"
         />
       </picture>
     </div>

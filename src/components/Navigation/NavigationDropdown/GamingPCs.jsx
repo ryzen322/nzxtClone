@@ -3,12 +3,13 @@ import BackdropUI from "../../../UI/Backdrop";
 import { PiComputerTower } from "react-icons/pi";
 import { MdNavigateNext } from "react-icons/md";
 import { HiDesktopComputer } from "react-icons/hi";
+import Img from "../../../UI/Img";
 
 const PcArrayItem = ({ player, pcPArts, img }) => {
   return (
     <div className=" flex items-center px-3 mt-3 gap-2 group cursor-pointer">
       <div className="w-[3.25rem] h-[3.25rem] shrink-0">
-        <img className=" w-full h-full object-cover" src={img} alt="" />
+        <Img className=" w-full h-full object-cover" src={img} alt="" />
       </div>
       <div className=" flex flex-col leading-5 ">
         <h1 className=" text-[15px] font-semibold group-hover:text-[#bb86fc]">

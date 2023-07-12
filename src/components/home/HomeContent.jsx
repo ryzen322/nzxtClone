@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "../../UI/Img";
 
 const HomeContent = () => {
   return (
@@ -19,11 +20,12 @@ const HomeContent = () => {
           media="(min-width:770px)"
           srcSet={`https://nzxt.com/assets/cms/34299/1658962667-why-buy-a-custom-bld-primary.png?auto=format&fit=max&h=900&w=672`}
         />
-        <img
+
+        <Img
           src={
             "https://nzxt.com/assets/cms/34299/1658962667-why-buy-a-custom-bld-primary.png?auto=format&fit=max&h=550&w=384"
           }
-          alt=""
+          className=""
         />
       </picture>
       <div className=" absolute rounded-md top-0">
@@ -36,11 +38,11 @@ const HomeContent = () => {
             media="(min-width:770px)"
             srcSet={`https://nzxt.com/assets/cms/34299/1658962647-why-build-a-custom-pc-bg-web.png?auto=format&fit=max&h=900&w=1375`}
           />
-          <img
+
+          <Img
             src={
               "https://nzxt.com/assets/cms/34299/1658962648-why-build-a-custom-pc-bg-mobile.png?auto=format&fit=max&h=600&w=768"
             }
-            alt=""
           />
         </picture>
       </div>

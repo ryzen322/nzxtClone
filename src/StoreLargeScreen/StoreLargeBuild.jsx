@@ -1,4 +1,5 @@
 import { MdOutlineNavigateNext } from "react-icons/md";
+import Img from "../UI/Img";
 
 const StoreLargeBuild = () => {
   return (
@@ -7,10 +8,9 @@ const StoreLargeBuild = () => {
         <h1 className=" text-white text-2xl font-semibold">H5 Flow Build</h1>
       </div>
       <div className=" w-full h-[18rem] flex justify-center items-center">
-        <img
-          className=" w-[16rem] 2xl:w-[30rem]"
+        <Img
           src={`https://nzxt.com/_next/image?url=https%3A%2F%2Fcdn.letsbld.com%2Fapp%2Fstorage%2Fcache%2Fdata%2FrzjMYx.png&w=640&q=75`}
-          alt=""
+          className={" w-[16rem] 2xl:w-[30rem]"}
         />
       </div>
       <div className=" w-full h-[3rem] bg-[#313235] absolute bottom-0 rounded-t-md flex items-center justify-between px-2 cursor-pointer">

@@ -108,7 +108,7 @@ const FooterBody = () => {
   return (
     <div className="container mx-auto mt-12 text-white">
       <FooterBodyHeading />
-      <div className=" mt-12 md:grid grid-cols-3 gap-8">
+      <div className=" mt-12 md:grid grid-cols-3 gap-8 2xl:grid-cols-6">
         {items.map((item) => (
           <FooterBodyList key={item.id} title={item.title} list={item.list} />
         ))}

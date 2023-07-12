@@ -75,7 +75,7 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="  flex items-center p-4 relative w-full lg:bg-[#313235] lg:z-[200]">
+      <header className="  flex items-center fixed top-0 left-0 bg-white z-50 p-4  w-full lg:bg-[#313235] lg:z-[200]">
         <nav className=" container mx-auto w-full ">
           <ul className=" text-stone-200 flex items-center lg:gap-2">
             <li className=" flex items-center text-black gap-4">

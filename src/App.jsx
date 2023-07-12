@@ -9,6 +9,8 @@ import HomePage from "./components/home/HomePage";
 import StoreNav from "./components/StoreNavigation/StoreNav";
 import ShoppingStore from "./components/StoreNavigation/ShoppingStore";
 import CartParts from "./components/Cart";
+import CheckOut from "./pages/CheckOut";
+import CheckOutMain from "./components/checkout/CheckOutMain";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +21,9 @@ const router = createBrowserRouter(
       </Route>
       <Route path="build/pc" element={<StoreNav />}>
         <Route index element={<ShoppingStore />} />
+      </Route>
+      <Route path="checkout" element={<CheckOut />}>
+        <Route index element={<CheckOutMain />} />
       </Route>
     </>
   )

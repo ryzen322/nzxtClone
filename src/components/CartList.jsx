@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import ItemListCart from "./ItemListCart";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
+import Img from "../UI/Img";
 
 const CartList = () => {
   const items = useSelector((state) => state.myStore);
@@ -40,7 +41,7 @@ const CartList = () => {
     <>
       <div className=" mt-4 w-full flex">
         <div className=" w-[4.25rem] h-[4.25rem] flex items-center justify-center">
-          <img className=" w-full h-full object-contain" src={images} alt="" />
+          <Img src={images} className={" w-full h-full object-contain"} />
         </div>
         <h1 className=" font-bold text-black/80">NZXT H5 Flow White Build</h1>
         <div className=" w-[5rem] h-[4.5rem] ml-auto flex items-center justify-center flex-col">

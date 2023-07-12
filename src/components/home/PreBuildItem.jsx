@@ -1,3 +1,5 @@
+import Img from "../../UI/Img";
+
 const PreBuildItem = ({ description, title, images }) => {
   return (
     <div className=" flex flex-col h-[20rem] items-center 2xl:grow ">
@@ -10,10 +12,11 @@ const PreBuildItem = ({ description, title, images }) => {
         </p>
       </div>
       <picture>
-        <img
-          className=" w-[25rem] md:w-[24rem] 2xl:w-[40rem]"
+        <Img
           src={images}
-          alt=""
+          className={` w-[25rem] md:w-[24rem] 2xl:w-[40rem]`}
+          alt={title}
+          title={title}
         />
       </picture>
     </div>

@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import BackdropUI from "../../../UI/Backdrop";
 import { MdSpeed } from "react-icons/md";
+import Img from "../../../UI/Img";
 
 const CommunityItemPc = () => {
   const preventPropogation = (event) => {
@@ -67,7 +68,7 @@ const CommunityItemPc = () => {
             <p className=" font-normal text-base">We want to grow with you!</p>
           </div>
           <div className=" w-full flex-1 overflow-hidden mt-[3.16rem]">
-            <img
+            <Img
               className=" group-hover:scale-110 transition-all"
               src="https://nzxt.com/assets/cms/34299/1639696534-partner-program-nav-cta.png?auto=format&fit=clip&h=270&w=270"
               alt=""

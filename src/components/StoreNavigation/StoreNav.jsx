@@ -1,4 +1,3 @@
-import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { NavLink, Outlet } from "react-router-dom";
 
 const StoreNav = () => {
@@ -7,12 +6,12 @@ const StoreNav = () => {
       <header className=" bg-black z-50 flex items-center p-4 fixed top-0 w-full ">
         <nav>
           <ul className=" text-stone-200 ">
-            <li>
-              <NavLink to="" className=" hidden">
-                Gaming PCS
-              </NavLink>
-              <NavLink to="">
-                <HiOutlineMenuAlt2 size="1.4rem" />
+            <li className=" text-black block lg:bloc ml-4">
+              <NavLink
+                to=".."
+                className=" font-extrabold text-[1.35rem] text-white"
+              >
+                NZXT
               </NavLink>
             </li>
           </ul>
