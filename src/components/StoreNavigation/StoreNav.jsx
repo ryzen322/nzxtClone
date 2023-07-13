@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import ScrollToTop from "../ScrollToTop";
 
 const StoreNav = () => {
   return (
@@ -20,6 +21,7 @@ const StoreNav = () => {
 
       <main>
         <Outlet />
+        <ScrollToTop />
       </main>
     </>
   );

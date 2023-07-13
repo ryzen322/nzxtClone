@@ -19,7 +19,7 @@ const CheckOutForm = () => {
     <div className=" w-ful mt-12">
       <p className=" text-center uppercase text-sm text-[#717171]  ">or</p>
       <form action="" className=" mt-4 flex flex-col">
-        <div className=" grid grid-cols-2">
+        <div className=" grid grid-cols-2 my-4">
           <h1 className=" text-lg font-medium">Contact</h1>
           <p className=" text-[#545454] text-[14px] ml-auto">
             Already have an Account?
@@ -39,8 +39,8 @@ const CheckOutForm = () => {
           </label>
         </div>
 
-        <h1 className=" mt-6 text-lg">Shipping Address</h1>
-        <div className=" grid grid-cols-1 lg:grid-cols-3 gap-x-4">
+        <h1 className=" my-6 text-lg">Shipping Address</h1>
+        <div className=" grid grid-cols-1 lg:grid-cols-3 gap-4 px-2 sm:px-0">
           <CheckOutInput
             name="Country"
             inputValue={region}
@@ -67,13 +67,7 @@ const CheckOutForm = () => {
           />
 
           <CheckOutInput
-            name="address"
-            inputValue={address}
-            setInput={setAddress}
-            className=" lg:col-span-full"
-          />
-          <CheckOutInput
-            name="address"
+            name="Address"
             inputValue={address}
             setInput={setAddress}
             className=" lg:col-span-full"
@@ -110,9 +104,9 @@ const CheckOutForm = () => {
           />
         </div>
       </form>
-      <div className="flex flex-col lg:flex-row-reverse gap-6">
+      <div className="flex flex-col lg:flex-row-reverse gap-6 px-2 sm:px-0">
         <button className=" my-4 bg-[#1990C6] w-full rounded-md text-white py-5">
-          continue to shipping
+          Continue to shipping
         </button>
         <Link
           to="../cart"

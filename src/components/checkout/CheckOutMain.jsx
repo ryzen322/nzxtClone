@@ -23,13 +23,15 @@ const CheckOutMain = () => {
       <div className=" container mx-auto px-2 flex gap-[5rem] 2xl:px-[10rem]">
         <div className=" col-span-2 flex flex-col lg:col-span-1 lg:w-[60%]">
           <div className=" w-[15rem] h-auto">
-            <Img
-              className=" w-full h-full object-contain
+            <Link to="/">
+              <Img
+                className=" w-full h-full object-contain
             "
-              src={`https://cdn.shopify.com/s/files/1/1986/9305/files/new-logo-for-emails.png?467`}
-              alt="Logo NZXT"
-              title="Logo NZXT"
-            />
+                src={`https://cdn.shopify.com/s/files/1/1986/9305/files/new-logo-for-emails.png?467`}
+                alt="Logo NZXT"
+                title="Logo NZXT"
+              />
+            </Link>
           </div>
           <div className=" flex flex-col w-full h-auto mt-10 lg:hidden">
             <div className=" flex items-center justify-between ">
@@ -104,7 +106,7 @@ const CheckOutMain = () => {
           <CheckOutArrayList />
         </div>
       </div>
-      <div className="container mx-auto mt-10 mb-4 2xl:px-[10rem]">
+      <div className="container mx-auto mt-10 mb-4 px-4 sm:px-0 2xl:px-[10rem]">
         <p className=" text-[#545454] text-[14px] ml-auto">
           All rights reserved NZXT
         </p>

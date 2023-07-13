@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/Navigation/NavBar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const NavigationHomePage = () => {
   return (
@@ -8,6 +9,7 @@ const NavigationHomePage = () => {
 
       <main>
         <Outlet />
+        <ScrollToTop />
       </main>
     </>
   );

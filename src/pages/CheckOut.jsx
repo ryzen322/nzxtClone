@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop";
 
 const CheckOut = () => {
   return (
@@ -6,6 +7,7 @@ const CheckOut = () => {
       <div className="container  mx-auto bg-white p-3 lg:mb-8"></div>
       <main>
         <Outlet />
+        <ScrollToTop />
       </main>
     </>
   );

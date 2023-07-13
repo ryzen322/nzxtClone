@@ -35,6 +35,7 @@ function App() {
       {/* <div className=" h-11 w-full bg-[#8a00fc] flex items-center justify-center text-white">
         <p className=" text-xs font-[500]">All PCs Built in 2 business Days</p>
       </div> */}
+
       <RouterProvider router={router} />
     </>
   );
