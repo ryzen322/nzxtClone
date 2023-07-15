@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
+import { shoppingCart } from "../store/storeSlice";
 import StoreLargeBuildItem from "./StoreLargeBuildItem";
 import StorageParts from "./storageParts/StorageParts";
 import { useSelector } from "react-redux";
 
 const StoreLargeScreen = () => {
-  const pcParts = useSelector((state) => state.myStore);
+  const { store: pcParts } = useSelector(shoppingCart);
 
   const itemValue = [];
 
@@ -12,7 +13,9 @@ const StoreLargeScreen = () => {
     itemValue.push(items);
   }
 
-  const itemValuesData = [...itemValue.slice(1, 9)];
+  const itemValuesData = [...itemValue].filter(
+    (state) => !state.includes("id")
+  );
 
   const pcPartsArray = [];
   const pcPartsFinalyArray = [];
@@ -34,7 +37,6 @@ const StoreLargeScreen = () => {
     const images = item.images;
     const id = item.pcParts;
     const activeState = item.toggle;
-    const itemArray = item.itemArray;
     const price = item.total;
     const quantity = item.quantity;
     pcPartsFinalyArray.push({
@@ -43,7 +45,6 @@ const StoreLargeScreen = () => {
       partsName,
       images,
       activeState,
-      itemArray,
       price,
       quantity,
     });

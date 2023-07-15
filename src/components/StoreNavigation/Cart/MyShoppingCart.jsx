@@ -16,7 +16,7 @@ const MyShoppingCart = ({
     <div
       className={`text-white fixed bottom-0 left-0 w-full ${
         state ? "h-[39rem]" : "h-0"
-      } bg-black rounded-t-md flex flex-col overflow-hidden transition-all z-50`}
+      } bg-black rounded-t-md flex flex-col overflow-hidden transition-all z-50 ring-1 ring-white/70`}
     >
       <div
         className="  w-full h-[3.5rem] relative"

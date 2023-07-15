@@ -13,7 +13,7 @@ const ShoppingCart = ({
   coolingRef,
   powersupplyRef,
 }) => {
-  const pcParts = useSelector((state) => state.myStore);
+  const { store: pcParts } = useSelector((state) => state.myStore);
 
   const referrences = [
     caseRef,
@@ -32,7 +32,9 @@ const ShoppingCart = ({
     itemValue.push(items);
   }
 
-  const itemValuesData = [...itemValue.slice(1, 9)];
+  const itemValuesData = [...itemValue].filter(
+    (state) => !state.includes("id")
+  );
 
   const pcPartsArray = [];
   const pcPartsFinalyArray = [];
@@ -54,7 +56,6 @@ const ShoppingCart = ({
     const images = item.images;
     const id = item.pcParts;
     const activeState = item.toggle;
-    const itemArray = item.itemArray;
 
     pcPartsFinalyArray.push({
       id,
@@ -62,7 +63,6 @@ const ShoppingCart = ({
       partsName,
       images,
       activeState,
-      itemArray,
     });
   }
   const mergeArray = pcPartsFinalyArray.map((item, index) => {
@@ -86,7 +86,7 @@ const ShoppingCart = ({
             itemArray={data.itemArray}
             referrences={data.referrences}
             partsName={data.partsName}
-            itemPartsName={data.itemPartsName}
+            itemPartsName={data.itemPartsName?.toLowerCase()}
           />
         ))}
       </section>

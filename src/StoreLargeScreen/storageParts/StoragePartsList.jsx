@@ -12,11 +12,9 @@ const StoragePartsList = ({ dataArray = [], itemValuesData }) => {
       {mergeArray.map((data) => (
         <StorageListData
           key={data.id}
-          itemArray={data.itemArray}
           keys={data.keys}
           activeState={data.activeState}
           itemPartsName={data.itemPartsName}
-          if
         />
       ))}
     </div>

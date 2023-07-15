@@ -1,14 +1,12 @@
 import { BiEdit } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { toggleState } from "../store/storeSlice";
-import { toggleStateChipset } from "../store/chipsetSlice";
 
 const StoreLargeItemList = ({
   images,
   brand,
   parts,
   activeState,
-  id,
   itemPartsName,
   itemValuesData,
 }) => {
@@ -16,8 +14,8 @@ const StoreLargeItemList = ({
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    console.log(itemPartsName);
     dispatch(toggleState({ id: getID, itemPartsName, items: itemValuesData }));
-    dispatch(toggleStateChipset(false));
   };
 
   return (

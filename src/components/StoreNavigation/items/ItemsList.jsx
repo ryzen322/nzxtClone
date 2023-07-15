@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { replaceParts } from "../../../store/storeSlice";
 import { useState } from "react";
 import Modal from "../../../UI/Modal";
+import Img from "../../../UI/Img";
 
 const ItemsList = ({
   images,
@@ -12,7 +13,8 @@ const ItemsList = ({
   price,
 }) => {
   const [removeBackdrop, setRemoveBackdrop] = useState(false);
-  const pcPartsName = useSelector((state) => state.myStore);
+  const { store: pcPartsName } = useSelector((state) => state.myStore);
+
   const dispatch = useDispatch();
   const id = 1;
 
@@ -71,7 +73,7 @@ const ItemsList = ({
       >
         <div className=" flex items-center gap-3">
           <div className=" w-[4.75rem] h-[5rem] bg-white rounded-md flex flex-col items-center justify-center shrink-0">
-            <img className=" w-[4.5rem]" src={images} alt="" />
+            <Img className=" w-[4.5rem]" src={images} alt="" />
           </div>
           <div className=" flex flex-col text-white">
             <h1 className=" text-lg font-semibold">{name}</h1>

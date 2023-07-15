@@ -1,16 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  Case,
-  cooling,
-  ram,
-  psu,
-  storage,
-  gpu,
-  cpu,
-  motherboard,
-} from "./Pcparts/parts";
 
-const initialState = [
+const store = [
   {
     id: 1,
     case: {
@@ -23,7 +13,6 @@ const initialState = [
       quantity: 1,
       price: 94,
       total: 94,
-      itemArray: Case,
     },
     cpu: {
       pcParts: `AMD Ryzen 5 5600X 6-Cores 3.7GHz`,
@@ -35,7 +24,6 @@ const initialState = [
       quantity: 1,
       price: 170,
       total: 170,
-      itemArray: cpu,
     },
     gpu: {
       pcParts: `ASUS GeForce RTX™ 4060 Ti Dual OC 8G`,
@@ -47,7 +35,6 @@ const initialState = [
       quantity: 1,
       price: 300,
       total: 300,
-      itemArray: gpu,
     },
     motherboard: {
       pcParts: `ASRock X570 Taichi WIFI`,
@@ -59,7 +46,6 @@ const initialState = [
       quantity: 1,
       price: 260,
       total: 260,
-      itemArray: motherboard,
     },
     ram: {
       pcParts: `Team T-FORCE Vulcan Z DDR4 3200MHz DDR4`,
@@ -71,7 +57,6 @@ const initialState = [
       price: 39,
       total: 39,
       capacity: "16GB (2 x 8GB)",
-      itemArray: ram,
     },
     storage: {
       pcParts: `Western Digital SN570`,
@@ -83,7 +68,6 @@ const initialState = [
       quantity: 1,
       price: 40,
       total: 40,
-      itemArray: storage,
     },
     cooling: {
       pcParts: `Gigabyte Aorus Waterforce 240`,
@@ -95,7 +79,6 @@ const initialState = [
       quantity: 1,
       price: 160,
       total: 160,
-      itemArray: cooling,
     },
     powersupply: {
       pcParts: `XPG Core Reactor 650W Gold`,
@@ -107,25 +90,24 @@ const initialState = [
       quantity: 1,
       price: 100,
       total: 100,
-      itemArray: psu,
     },
   },
 ];
 
 export const storeSlice = createSlice({
   name: "store",
-  initialState,
+  initialState: {
+    store,
+  },
   reducers: {
     toggleState: (state, action) => {
       const parts = action.payload.itemPartsName;
       const id = action.payload.id;
       const items = action.payload.items;
 
-      const item = state.find((item) => item.id === id);
+      const item = state.store.find((item) => item.id === id);
 
       if (item) {
-        // item[parts].toggle = true;
-
         items.map((data) => {
           if (parts === data) {
             return (item[parts].toggle = true);
@@ -136,19 +118,7 @@ export const storeSlice = createSlice({
         });
       }
     },
-    replaceItems: (state, action) => {
-      const brandName = action.payload.name;
-      const id = action.payload.idData;
-      const images = action.payload.images;
-      const partsName = action.payload.partsName;
 
-      const item = state.find((item) => item.id === id);
-
-      if (item) {
-        (item[partsName].images = images),
-          (item[partsName].pcParts = brandName);
-      }
-    },
     replaceParts: (state, action) => {
       const id = action.payload.id;
       const images = action.payload.images;
@@ -158,7 +128,7 @@ export const storeSlice = createSlice({
       const price = +action.payload.price;
       const capacity = action.payload.capacity;
 
-      const item = state.find((item) => item.id === id);
+      const item = state.store?.find((item) => item.id === id);
 
       if (item) {
         (item[partsName].images = images),
@@ -171,6 +141,8 @@ export const storeSlice = createSlice({
   },
 });
 
-export const { replaceParts, replaceItems, toggleState } = storeSlice.actions;
+export const shoppingCart = (state) => state.myStore;
+
+export const { replaceParts, toggleState } = storeSlice.actions;
 
 export default storeSlice.reducer;

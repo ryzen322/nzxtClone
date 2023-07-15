@@ -5,7 +5,7 @@ import { useState } from "react";
 import { GrLinkNext } from "react-icons/gr";
 
 const CheckOutArrayList = () => {
-  const data = useSelector((state) => state.myStore);
+  const { store: data } = useSelector((state) => state.myStore);
   const [gift, setGift] = useState("");
 
   const listOfData = [];

@@ -1454,3 +1454,14 @@ export const Case = [
     },
   },
 ];
+
+export const itemParts = {
+  case: Case,
+  cpu,
+  gpu,
+  motherboard,
+  ram,
+  storage,
+  cooling,
+  powersupply: psu,
+};

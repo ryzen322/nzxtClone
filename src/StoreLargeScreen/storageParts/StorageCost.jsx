@@ -1,19 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import useStoreValue from "../../components/useStore";
 
-const StorageCost = ({ priceItem = [] }) => {
+const StorageCost = () => {
   const navigate = useNavigate();
-  const total = priceItem
-    .map((data) => data.price)
-    .reduce((curr, value) => curr + value, 0);
-  const currency = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "USD",
-  });
-
-  const price = currency.format(total);
-
+  const price = useStoreValue();
   return (
-    <div className=" absolute w-full left-0 bottom-0 h-[6rem] bg-[#111113] flex items-center pb-6 pt-1 px-[3rem]">
+    <div className=" absolute w-full left-0 bottom-0 h-[6rem] bg-[#111113] flex items-center pb-6 pt-1 px-[3rem] z-10">
       <div className=" h-full flex flex-col justify-center text-white pr-[3rem] border-r border-white">
         <p className=" font-semibold leading-3">Estimated</p>
         <p className=" font-semibold">Shipping</p>

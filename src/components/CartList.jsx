@@ -4,9 +4,10 @@ import ItemListCart from "./ItemListCart";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 import Img from "../UI/Img";
+import useStoreValue from "./useStore";
 
 const CartList = () => {
-  const items = useSelector((state) => state.myStore);
+  const { store: items } = useSelector((state) => state.myStore);
   const navigate = useNavigate();
 
   const pcPartsArray = [];
@@ -24,18 +25,7 @@ const CartList = () => {
 
   const images = pcPartsArray[0].images;
 
-  const totalItems = useMemo(() => {
-    return pcPartsArray
-      .map((state) => state.total)
-      .reduce((cur, value) => cur + value, 0);
-  }, [pcPartsArray]);
-
-  const currency = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "USD",
-  });
-
-  const totalCost = currency.format(totalItems);
+  const price = useStoreValue();
 
   return (
     <>
@@ -58,7 +48,7 @@ const CartList = () => {
             </h1>
           </div>
           <div className=" mt-auto">
-            <h1 className=" text-stone-500 text-[15px]">{totalCost}</h1>
+            <h1 className=" text-stone-500 text-[15px]">{price}</h1>
           </div>
         </div>
       </div>

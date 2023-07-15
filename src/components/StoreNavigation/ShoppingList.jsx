@@ -3,9 +3,13 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import MyShoppingCart from "./Cart/MyShoppingCart";
+import useStoreValue from "../useStore";
 
 const ShoppingList = ({ executeScroll, funcState = [] }) => {
-  const itemData = useSelector((state) => state.myStore);
+  const { store: itemData } = useSelector((state) => state.myStore);
+
+  const price = useStoreValue();
+
   const [toggle, setToggle] = useState(false);
 
   const partsItemArray = [];
@@ -21,17 +25,6 @@ const ShoppingList = ({ executeScroll, funcState = [] }) => {
     partsItemArray.push(item.cooling);
     partsItemArray.push(item.powersupply);
   }
-
-  const total = partsItemArray
-    .map((cur) => cur.total)
-    .reduce((curr, value) => curr + value, 0);
-
-  const currency = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "USD",
-  });
-
-  const price = currency.format(total);
 
   const toggleShoppingList = () => {
     setToggle((state) => !state);
@@ -53,7 +46,7 @@ const ShoppingList = ({ executeScroll, funcState = [] }) => {
 
   return (
     <>
-      <div className=" fixed h-[7.5rem] bottom-0 left-0 bg-black w-full border-t  border-stone-700 p-2 flex flex-col gap-2">
+      <div className=" fixed h-[7.5rem] bottom-0 left-0 bg-black w-full border-t  border-stone-700 p-2 flex flex-col gap-2 z-30">
         <div className=" flex items-center gap-3">
           <div
             className=" w-[2.4rem] h-[2.4rem]  rounded-full border border-white flex justify-center items-center cursor-pointer"

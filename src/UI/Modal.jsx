@@ -75,8 +75,6 @@ const Backdrop = ({
         </div>
         <div className=" h-[15rem] lg:h-[10rem]">
           <Img src={images} className=" w-full h-full object-contain" />
-
-          <img className=" w-full h-full object-contain" src={images} alt="" />
         </div>
         <h1 className=" text-white m-8 text-2xl font-semibold text-center">
           {title}

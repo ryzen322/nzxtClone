@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Img from "../UI/Img";
 import CartPheripheralsItems from "./CartPheripheralsItems";
+import useStoreValue from "./useStore";
 
 const CartPheripherals = () => {
+  const price = useStoreValue();
+
   return (
     <section className=" flex flex-col mt-[7rem] gap-8 col-span-2 lg:mt-[1rem] lg:col-span-1">
       <button className=" flex flex-col items-center gap-2">
@@ -20,7 +23,7 @@ const CartPheripherals = () => {
 
         <div className=" flex justify-between items-center text-[20px] py-4 border-b border-stone-600/30">
           <h1 className=" font-medium">Subtotal</h1>
-          <p>$1,366.91</p>
+          <p>{price}</p>
         </div>
         <div className=" flex justify-between items-center font-semibold">
           <h1>Taxes</h1>

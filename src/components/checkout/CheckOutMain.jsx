@@ -10,6 +10,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import CheckOutForm from "./CheckOutForm";
 import CheckOutArrayList from "./CheckOutArrayList";
+import useStoreValue from "../useStore";
 
 const CheckOutMain = () => {
   const [showList, setShowList] = useState(false);
@@ -17,6 +18,8 @@ const CheckOutMain = () => {
   const showListData = () => {
     setShowList((state) => !state);
   };
+
+  const price = useStoreValue;
 
   return (
     <>
@@ -51,7 +54,7 @@ const CheckOutMain = () => {
               </div>
               <div className=" flex flex-col leading-5">
                 <h1 className=" text-[#717171] text-xs ml-auto line-through">
-                  $1.231,91
+                  {price}
                 </h1>
                 <h1 className=" text-lg">$1,122,91</h1>
               </div>

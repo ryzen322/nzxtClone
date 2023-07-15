@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const chipseSlice = createSlice({
   name: "chipset",
@@ -204,9 +204,6 @@ export const chipseSlice = createSlice({
     ],
   },
   reducers: {
-    toggleStateChipset: (state, action) => {
-      state.value = action.payload;
-    },
     toggleNav: (state, action) => {
       const id = action.payload.id;
 
@@ -222,6 +219,6 @@ export const chipseSlice = createSlice({
   },
 });
 
-export const { toggleStateChipset, toggleNav } = chipseSlice.actions;
+export const { toggleNav } = chipseSlice.actions;
 
 export default chipseSlice.reducer;

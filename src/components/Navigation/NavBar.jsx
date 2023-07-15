@@ -184,8 +184,6 @@ const NavBar = () => {
       </header>
 
       {toggle && <NavigationMobile onclickfunction={toggleNav} />}
-
-      {/* {toggle && <NavBarSelection />} */}
     </>
   );
 };

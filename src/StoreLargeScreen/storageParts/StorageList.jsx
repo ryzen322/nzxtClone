@@ -4,16 +4,9 @@ import { useState } from "react";
 import Modal from "../../UI/Modal";
 import Img from "../../UI/Img";
 
-const StorageList = ({
-  partsName,
-  images,
-  name,
-  size,
-  toggleStateHanlder,
-  information,
-  price,
-}) => {
-  const list = useSelector((state) => state.myStore);
+const StorageList = ({ partsName, images, name, size, information, price }) => {
+  const { store: list } = useSelector((state) => state.myStore);
+
   const [removeBackdrop, setRemoveBackdrop] = useState(false);
   const dispatch = useDispatch();
 
@@ -53,7 +46,6 @@ const StorageList = ({
     dispatch(
       replaceParts({ id: idData, images, name, partsName, quantity, price })
     );
-    toggleStateHanlder();
   };
 
   const backdrop = () => {
